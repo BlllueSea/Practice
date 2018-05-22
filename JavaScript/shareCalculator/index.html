@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>share calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="input-area">
+      <input type="text" id="price" placeholder="Price">
+      <input type="text" id="num" placeholder="People">
+      <select id="unit">
+        <option value="10">10yen</option>
+        <option value="100" selected>100yen</option>
+        <option value="1000">1000yen</option>
+      </select>
+      <button id="btn" class="disabled">Go</button><!-- [1]<button>はインライン要素。<select>から改行しているので空白が入って表示される -->
+    </div>
+    <div class="result-area">
+      <p id="result">Show result here.</p>
+      <div id="reset" class="hidden">Want to try again?</div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

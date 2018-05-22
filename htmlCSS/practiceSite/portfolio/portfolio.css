@@ -1,0 +1,27 @@
+
+.articleList{
+  border: solid 1px #cccccc;
+  width: 720px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+.articleList::after{
+  content: "";
+  clear: both;
+  display: block;
+}
+.articleList .articleContent {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: inherit;
+}
+
+.articleList .articleContent img{
+  float: left;
+}
+.articleList .articleContent div{
+  display: inline;
+  float: right;
+  width: 350px;
+}

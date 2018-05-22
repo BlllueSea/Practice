@@ -1,0 +1,56 @@
+body{
+  background-color: #F6F4DB;
+
+}
+
+main {
+  height: 100vh;  /* ビューポートに対して1:1 */
+}
+.scrolling > .bg {
+    transform: skewY(-4.5deg);
+    background-color: #F6F4DB;
+    margin: -50px auto;
+    padding: 10px 0;
+}
+
+.scrolling  > p {
+      transform: skewY(4.5deg);
+      width: 60%;
+      margin: 60px auto;
+      font-size: 25px;
+  }
+
+
+.fixed {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /*ここがキモ！！！！*/
+  background-position: center center;
+}
+
+  .bg1 { background-image: url(IMG_0455.jpg); }
+  .bg2 { background-image: url(IMG_1537.jpg); }
+  .bg3 { background-image: url(IMG_1157.jpg); }
+  .bg4 { background-image: url(IMG_1911.jpg); }
+
+
+.fixed.bg1 {
+  position: relative;
+}
+  .fixed.bg1 > .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    color: white;
+}
+.fixed.bg1  > h1 {
+      font-size: 70px;
+      margin: 0;
+    }
+.fixed.bg1    > p {
+      font-size: 30px;
+    }

@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+/*common*/
+
+body{
+    font-size: 14px;
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    /*background: hsl(0, 5%, 50%);*/
+    /*background: LightSalmon;*/
+}
+
+p{
+  line-height: 2;
+}
+
+.container{
+  width: 90%;
+  margin: 0 auto; /* TopBottom=0px RightLeft=put at middel */
+}
+
+
+/* header */
+.header-mobile-menu{
+  float: right;
+  font-size: 24px;
+  cursor: pointer; /* cursor settiong */
+}
+.header-pc-menu{
+  display: none;
+}
+
+
+section{
+  padding: 60px 0;
+}
+
+section h2{
+  text-align: center;
+  margin: 30px 0 60px;
+}
+
+section:nth-child(even){
+  background: hsl(0, 5%, 50%);
+  /*background: #fff;*/
+}
+/* nth-chile→ all children containd in one parent are counted */
+
+
+
+/* features */
+.features img{
+    /*text-align: center;*/
+    width: 100%;
+}
+.features .item{
+    /*text-align: center;*/
+    margin-bottom: 50px;
+}
+.features .item:last-child{
+    margin-bottom: 0;
+}
+
+
+/* news */
+.news .item{
+  text-align: center;
+}
+
+.news p{
+  text-align: left;
+}
+
+
+/* How to Use */
+.how-to-use iframe{
+  /*width: 100%;
+  height: auto;*/
+  /*display: none; /* pouse */
+
+  position: absolute;
+  width: 100%;
+  height:100%;
+  top: 0; /* position inside of parent */
+  bottom: 0;
+}
+.inframe-wrapper{
+  padding-bottom: 56.25%;
+  height: 0;
+  /*background: pink;*/
+  position: relative;
+
+}
+
+/* footer */
+footer {
+  text-align: center;
+  color: #ccc;
+  padding: 30px 0;
+}
+
+
+/* medium */
+@media (min-width: 570px){
+  /*body{
+    background: plum;
+  }*/
+
+  .features p{
+    width: 45%;
+  }
+  .features img{
+    width: 50%;
+  }
+  /*.pull-right{*/
+  .right-side{
+    float: right;
+    padding-left: 5%;
+  }
+  /*.pull-left{*/
+  .left-side{
+    float: left;
+    padding-right: 5%;
+  }
+  .features .item{
+    overflow: hidden;/*why put this?*/
+  }
+
+  .news .container{
+    display: flex;/* make this container flexible as so to difine each item individually. This container become like block-level, no matter what is the TAG */
+    justify-content: space-between;
+  }
+
+  .news .item{
+    width: 30%;
+  }
+  .news .item img{
+    width: 100%
+  }
+
+
+
+}
+
+/*l arge */
+@media (min-width: 820px){
+  /*Body{
+    background: darkseagreen;
+  }
+}*/
+  .container{
+    width: 820;
+  }
+  .header-mobile-menu{
+    display: none;
+  }
+  .header-pc-menu{
+    display: block; /* item which was unvisible is mede become visible */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: right;
+
+  }
+
+  .header-pc-menu > li {
+    display: inline-block;/* make it like botton, which line up holizontally and can be change its wdth or height */
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+  }
